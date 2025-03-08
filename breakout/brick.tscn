@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4ou2d1c8tqkm"]
+
+[ext_resource type="Script" path="res://brick.gd" id="1_trfv6"]
+
+[node name="Brick" type="StaticBody2D"]
+script = ExtResource("1_trfv6")
+size = null

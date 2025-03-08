@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://bf0b0qu3f5crt"]
+
+[ext_resource type="Script" path="res://ball.gd" id="1_1rlh5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a81tk"]
+
+[node name="Ball" type="CharacterBody2D"]
+script = ExtResource("1_1rlh5")
+
+[node name="RayCast2DDown" type="RayCast2D" parent="."]
+target_position = Vector2(0, 16)
+
+[node name="RayCast2DUp" type="RayCast2D" parent="."]
+target_position = Vector2(0, -16)
+
+[node name="RayCast2DRight" type="RayCast2D" parent="."]
+target_position = Vector2(16, 0)
+
+[node name="RayCast2DLeft" type="RayCast2D" parent="."]
+target_position = Vector2(-16, 0)
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+offset = Vector2(-10, -10)
+polygon = PackedVector2Array(0, 0, 20, 0, 20, 20, 0, 20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_a81tk")

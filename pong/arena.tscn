@@ -1,0 +1,292 @@
+[gd_scene load_steps=8 format=3 uid="uid://sgbu4fao52pv"]
+
+[ext_resource type="Script" path="res://arena.gd" id="1_f8aek"]
+[ext_resource type="PackedScene" uid="uid://dtdeul3x0886i" path="res://paddle.tscn" id="1_xtu1u"]
+[ext_resource type="PackedScene" uid="uid://bf0b0qu3f5crt" path="res://ball.tscn" id="3_wn4my"]
+[ext_resource type="Script" path="res://menu.gd" id="4_ltwew"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_c06ml"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ft2od"]
+size = Vector2(168, 823)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wekce"]
+size = Vector2(170, 756.5)
+
+[node name="Game" type="Control"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+material = SubResource("CanvasItemMaterial_c06ml")
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_f8aek")
+ball_speed = 600
+ball_width = null
+ball_height = null
+
+[node name="ArenaBackground" type="ColorRect" parent="."]
+layout_mode = 2
+offset_right = 1152.0
+offset_bottom = 648.0
+size_flags_horizontal = 3
+color = Color(0.2, 0.2, 0.2, 1)
+
+[node name="HBoxArena" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LeftGameUI" type="VBoxContainer" parent="HBoxArena"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxScoreRight" type="VBoxContainer" parent="HBoxArena/LeftGameUI"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ScoreTextRight" type="RichTextLabel" parent="HBoxArena/LeftGameUI/VBoxScoreRight"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/normal_font_size = 80
+bbcode_enabled = true
+text = "[center]0[/center]"
+
+[node name="VBoxHintRight" type="VBoxContainer" parent="HBoxArena/LeftGameUI"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PlayerHintRight" type="RichTextLabel" parent="HBoxArena/LeftGameUI/VBoxHintRight"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "[center]Player 1[/center]"
+
+[node name="PlayerControlsHintRight" type="CenterContainer" parent="HBoxArena/LeftGameUI"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxControlsHintRight" type="VBoxContainer" parent="HBoxArena/LeftGameUI/PlayerControlsHintRight"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxArena/LeftGameUI/PlayerControlsHintRight/VBoxControlsHintRight"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="CenterControlBorder1" type="ColorRect" parent="HBoxArena/LeftGameUI/PlayerControlsHintRight/VBoxControlsHintRight/CenterContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxArena/LeftGameUI/PlayerControlsHintRight/VBoxControlsHintRight/CenterContainer/CenterControlBorder1"]
+custom_minimum_size = Vector2(50, 30)
+layout_mode = 2
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 40.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center]w[/center]"
+scroll_active = false
+
+[node name="HBoxControlsHintRight" type="HBoxContainer" parent="HBoxArena/LeftGameUI/PlayerControlsHintRight/VBoxControlsHintRight"]
+layout_mode = 2
+
+[node name="CenterContainer2" type="ColorRect" parent="HBoxArena/LeftGameUI/PlayerControlsHintRight/VBoxControlsHintRight/HBoxControlsHintRight"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="HBoxArena/LeftGameUI/PlayerControlsHintRight/VBoxControlsHintRight/HBoxControlsHintRight/CenterContainer2"]
+custom_minimum_size = Vector2(50, 30)
+layout_mode = 2
+offset_right = 50.0
+offset_bottom = 30.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center]a[/center]"
+scroll_active = false
+
+[node name="CenterContainer3" type="ColorRect" parent="HBoxArena/LeftGameUI/PlayerControlsHintRight/VBoxControlsHintRight/HBoxControlsHintRight"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="HBoxArena/LeftGameUI/PlayerControlsHintRight/VBoxControlsHintRight/HBoxControlsHintRight/CenterContainer3"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+offset_right = 50.0
+offset_bottom = 50.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center]s[/center]"
+scroll_active = false
+
+[node name="CenterContainer4" type="ColorRect" parent="HBoxArena/LeftGameUI/PlayerControlsHintRight/VBoxControlsHintRight/HBoxControlsHintRight"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="HBoxArena/LeftGameUI/PlayerControlsHintRight/VBoxControlsHintRight/HBoxControlsHintRight/CenterContainer4"]
+custom_minimum_size = Vector2(50, 30)
+layout_mode = 2
+offset_right = 50.0
+offset_bottom = 30.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center]d[/center]"
+scroll_active = false
+
+[node name="Divider" type="ColorRect" parent="HBoxArena"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+color = Color(0.933333, 0.933333, 0.933333, 1)
+
+[node name="RightGameUI" type="VBoxContainer" parent="HBoxArena"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxScoreRight" type="VBoxContainer" parent="HBoxArena/RightGameUI"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ScoreTextRight" type="RichTextLabel" parent="HBoxArena/RightGameUI/VBoxScoreRight"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/normal_font_size = 80
+bbcode_enabled = true
+text = "[center]0[/center]"
+
+[node name="VBoxHintRight" type="VBoxContainer" parent="HBoxArena/RightGameUI"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PlayerHintRight" type="RichTextLabel" parent="HBoxArena/RightGameUI/VBoxHintRight"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "[center]Player 2[/center]"
+
+[node name="PlayerControlsHintRight" type="CenterContainer" parent="HBoxArena/RightGameUI"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxControlsHintRight" type="VBoxContainer" parent="HBoxArena/RightGameUI/PlayerControlsHintRight"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxArena/RightGameUI/PlayerControlsHintRight/VBoxControlsHintRight"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="CenterControlBorder1" type="ColorRect" parent="HBoxArena/RightGameUI/PlayerControlsHintRight/VBoxControlsHintRight/CenterContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxArena/RightGameUI/PlayerControlsHintRight/VBoxControlsHintRight/CenterContainer/CenterControlBorder1"]
+custom_minimum_size = Vector2(50, 30)
+layout_mode = 2
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 40.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center]i[/center]"
+scroll_active = false
+
+[node name="HBoxControlsHintRight" type="HBoxContainer" parent="HBoxArena/RightGameUI/PlayerControlsHintRight/VBoxControlsHintRight"]
+layout_mode = 2
+
+[node name="CenterContainer2" type="ColorRect" parent="HBoxArena/RightGameUI/PlayerControlsHintRight/VBoxControlsHintRight/HBoxControlsHintRight"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="HBoxArena/RightGameUI/PlayerControlsHintRight/VBoxControlsHintRight/HBoxControlsHintRight/CenterContainer2"]
+custom_minimum_size = Vector2(50, 30)
+layout_mode = 2
+offset_right = 50.0
+offset_bottom = 30.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center]j[/center]"
+scroll_active = false
+
+[node name="CenterContainer3" type="ColorRect" parent="HBoxArena/RightGameUI/PlayerControlsHintRight/VBoxControlsHintRight/HBoxControlsHintRight"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="HBoxArena/RightGameUI/PlayerControlsHintRight/VBoxControlsHintRight/HBoxControlsHintRight/CenterContainer3"]
+custom_minimum_size = Vector2(50, 30)
+layout_mode = 2
+offset_right = 50.0
+offset_bottom = 30.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center]k[/center]"
+scroll_active = false
+
+[node name="CenterContainer4" type="ColorRect" parent="HBoxArena/RightGameUI/PlayerControlsHintRight/VBoxControlsHintRight/HBoxControlsHintRight"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="HBoxArena/RightGameUI/PlayerControlsHintRight/VBoxControlsHintRight/HBoxControlsHintRight/CenterContainer4"]
+custom_minimum_size = Vector2(50, 30)
+layout_mode = 2
+offset_right = 50.0
+offset_bottom = 30.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center]l[/center]"
+scroll_active = false
+
+[node name="PaddleLeft" parent="." instance=ExtResource("1_xtu1u")]
+position = Vector2(13, 219)
+
+[node name="PaddleRight" parent="." instance=ExtResource("1_xtu1u")]
+position = Vector2(1109, 220)
+
+[node name="GoalLeft" type="Area2D" parent="."]
+position = Vector2(-113, 311)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoalLeft"]
+position = Vector2(29, 24.5)
+shape = SubResource("RectangleShape2D_ft2od")
+
+[node name="GoalRight" type="Area2D" parent="."]
+position = Vector2(1348, 300)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoalRight"]
+position = Vector2(-112, -4)
+shape = SubResource("RectangleShape2D_wekce")
+
+[node name="Ball" parent="." instance=ExtResource("3_wn4my")]
+top_level = true
+position = Vector2(577, 336)
+motion_mode = 1
+
+[node name="Menu" type="Node2D" parent="."]
+process_mode = 3
+script = ExtResource("4_ltwew")
+
+[connection signal="body_entered" from="GoalLeft" to="." method="_on_goal_left_body_entered"]
+[connection signal="body_entered" from="GoalRight" to="." method="_on_goal_right_body_entered"]

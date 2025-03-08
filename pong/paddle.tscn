@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtdeul3x0886i"]
+
+[ext_resource type="Script" path="res://paddle.gd" id="1_eddho"]
+
+[node name="Paddle" type="CharacterBody2D"]
+modulate = Color(0.866667, 0.866667, 0.866667, 1)
+top_level = true
+script = ExtResource("1_eddho")

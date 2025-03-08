@@ -1,0 +1,52 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1741462476
+ball.gd::GDScript::-1::1741277501::0::1::::<>CharacterBody2D<>::
+breakout.gd::GDScript::-1::1741277812::0::1::::<>Node2D<>::
+breakout.tscn::PackedScene::8033223325244275498::1741460514::0::1::::<><>::res://breakout.gd<>res://paddle.gd<>uid://c0mbmk6un4rrg::::res://Beachball/PC/Beachball.ttf<>res://ball.gd<>uid://c76vh2yn4sqt3::::res://title_screen.tscn<>uid://bkx2nuvllo0mw::::res://rebound.wav<>uid://bcktt1xk4gho8::::res://scored.wav
+brick.gd::GDScript::-1::1741277770::0::1::::Brick<>StaticBody2D<>::
+brick.png::CompressedTexture2D::772819142034837732::1741178575::1741178577::1::::<><>::
+brick.tscn::PackedScene::6838481875607440392::1741460514::0::1::::<><>::res://brick.gd
+export_presets.cfg::TextFile::-1::1741296494::0::1::::<><>::
+paddle.gd::GDScript::-1::1741277837::0::1::::<>CharacterBody2D<>::
+rebound.wav::AudioStreamWAV::3137453465965222482::1741195459::1741195462::1::::<><>::
+scored.wav::AudioStreamWAV::2548631103087477145::1741198855::1741208808::1::::<><>::
+title_screen.gd::GDScript::-1::1741194652::0::1::::<>Node2D<>::
+title_screen.tscn::PackedScene::7084169087420422242::1741460514::0::1::::<><>::res://title_screen.gd
+::res://Beachball/::1741034837
+Beachball Short.png::CompressedTexture2D::7683679226613030821::1735850408::1741034837::1::::<><>::
+Beachball.png::CompressedTexture2D::7197315718664449255::1735850408::1741034837::1::::<><>::
+README.md::TextFile::-1::1675035768::0::1::::<><>::
+::res://Beachball/Atari8/::1741034837
+Beachball Short.fnt::FontFile::6693282731628206618::1735850416::1741034837::1::::<><>::
+Beachball.fnt::FontFile::4747130008199894839::1735850416::1741034837::1::::<><>::
+::res://Beachball/BBC/::1741034820
+::res://Beachball/C64/::1741034820
+::res://Beachball/CoCo/::1741034820
+::res://Beachball/CPC/::1741034820
+::res://Beachball/GameBoy/::1741034837
+Beachball Short-dark.json::JSON::-1::1735850418::0::1::::<><>::
+Beachball Short-dark.png::CompressedTexture2D::8873276308977491927::1735850418::1741034837::1::::<><>::
+Beachball Short-var.json::JSON::-1::1735850418::0::1::::<><>::
+Beachball Short-var.png::CompressedTexture2D::6681421873808453018::1735850418::1741034837::1::::<><>::
+Beachball Short.json::JSON::-1::1735850418::0::1::::<><>::
+Beachball Short.png::CompressedTexture2D::6031192084479352861::1735850418::1741034837::1::::<><>::
+Beachball-dark.json::JSON::-1::1735850416::0::1::::<><>::
+Beachball-dark.png::CompressedTexture2D::359844385321051358::1735850416::1741034837::1::::<><>::
+Beachball-var.json::JSON::-1::1735850416::0::1::::<><>::
+Beachball-var.png::CompressedTexture2D::949908125397193228::1735850416::1741034837::1::::<><>::
+Beachball.json::JSON::-1::1735850416::0::1::::<><>::
+Beachball.png::CompressedTexture2D::8939299594512386442::1735850416::1741034837::1::::<><>::
+::res://Beachball/PC/::1741034837
+Beachball Short.ttf::FontFile::8093796144365693583::1735850398::1741034837::1::::<><>::
+Beachball Short.woff::FontFile::4381345390095958157::1660743470::1741034837::1::::<><>::
+Beachball Short.woff2::FontFile::2434780028850503229::1660743470::1741034837::1::::<><>::
+Beachball.ttf::FontFile::6552417711955033476::1623067378::1741034837::1::::<><>::
+Beachball.woff::FontFile::6768190696153392011::1660743472::1741034837::1::::<><>::
+Beachball.woff2::FontFile::4080554570331348522::1660743470::1741034837::1::::<><>::
+::res://Beachball/Source/::1741034820
+::res://Beachball/Spectrum/::1741034820
+::res://Beachball/Web/::1741034837
+Beachball Short.woff::FontFile::5159227199143227485::1735850418::1741034837::1::::<><>::
+Beachball Short.woff2::FontFile::4211488244676434228::1735850418::1741034837::1::::<><>::
+Beachball.woff::FontFile::2742738461799137370::1735850418::1741034837::1::::<><>::
+Beachball.woff2::FontFile::3176178007464005599::1735850418::1741034837::1::::<><>::

@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://c2mjnhlbg0nkk"
+path="res://.godot/imported/Beachball Short.fnt-4bc9dbfe495ea061ddde752c5228f66b.fontdata"
+
+[deps]
+
+source_file="res://Beachball/Atari8/Beachball Short.fnt"
+dest_files=["res://.godot/imported/Beachball Short.fnt-4bc9dbfe495ea061ddde752c5228f66b.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2
