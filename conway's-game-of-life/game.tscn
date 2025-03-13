@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://dmjfiycwobscc"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_6gsvi"]
+[ext_resource type="PackedScene" uid="uid://cdo6r3aki1k30" path="res://universe.tscn" id="1_x3gqg"]
+[ext_resource type="PackedScene" uid="uid://wwka6dk2me7b" path="res://mouse_indicator.tscn" id="2_tgesr"]
+[ext_resource type="Texture2D" uid="uid://b2l1xqlufjye5" path="res://spritesheet.png" id="3_1bxn7"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wgnap"]
+texture = ExtResource("3_1bxn7")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ldd5l"]
+sources/0 = SubResource("TileSetAtlasSource_wgnap")
+
+[node name="Game" type="Node"]
+script = ExtResource("1_6gsvi")
+
+[node name="Universe" parent="." instance=ExtResource("1_x3gqg")]
+
+[node name="MouseIndicator" parent="Universe" instance=ExtResource("2_tgesr")]
+tile_set = SubResource("TileSet_ldd5l")
+
+[node name="GenerationTimer" type="Timer" parent="Universe"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(576, 324)
