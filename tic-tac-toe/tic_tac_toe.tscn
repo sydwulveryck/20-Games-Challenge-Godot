@@ -1,0 +1,52 @@
+[gd_scene load_steps=9 format=4 uid="uid://by3pdvjhof441"]
+
+[ext_resource type="Script" path="res://tic_tac_toe.gd" id="1_rnisl"]
+[ext_resource type="Texture2D" uid="uid://ct7j8bt0yrawa" path="res://tic-tac-toe-spritesheet.png" id="1_xfpk8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_50ydr"]
+texture = ExtResource("1_xfpk8")
+texture_region_size = Vector2i(216, 216)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_of8l1"]
+tile_size = Vector2i(216, 216)
+sources/0 = SubResource("TileSetAtlasSource_50ydr")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lfvqg"]
+texture = ExtResource("1_xfpk8")
+texture_region_size = Vector2i(216, 216)
+1:1/0 = 0
+2:1/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_p0dvk"]
+tile_size = Vector2i(216, 216)
+sources/0 = SubResource("TileSetAtlasSource_lfvqg")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e5w68"]
+texture = ExtResource("1_xfpk8")
+texture_region_size = Vector2i(216, 216)
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_q8775"]
+tile_size = Vector2i(216, 216)
+sources/0 = SubResource("TileSetAtlasSource_e5w68")
+
+[node name="TicTacToe" type="Node"]
+script = ExtResource("1_rnisl")
+
+[node name="GridTileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAACAAEAAAAAAAAAAAACAAIAAAAAAAAAAAAAAAIAAAAAAAAAAAABAAIAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_of8l1")
+
+[node name="SymbolsTileMapLayer" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_p0dvk")
+
+[node name="PreviewTileMapLayer" type="TileMapLayer" parent="."]
+modulate = Color(1, 1, 1, 0.443137)
+top_level = true
+tile_set = SubResource("TileSet_q8775")
